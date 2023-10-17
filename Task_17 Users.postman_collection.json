@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "7c717209-16e0-44b7-aa98-994b9dc0814e",
+		"name": "Task_17 Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25562220"
+	},
+	"item": [
+		{
+			"name": "CreateUserWithTasks",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"task_id\", jsonData.tasks[0].id);\r",
+							"\r",
+							"var task = pm.environment.get(\"task_id\")\r",
+							"console.log(task);\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"email\": \"mira{{$randomInt}}@mail.com\",\r\n \"name\": \"lena{{$randomInt}}\",\r\n \"tasks\": [{\r\n   \"title\": \"task1_NS\",\r\n   \"description\": \"Первая задача 11\"\r\n  }\r\n ],\r\n \"companies\": [19,20]\r\n }"
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createuserwithtasks",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createuserwithtasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddTaskInCron",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email_owner",
+							"value": "{{email_owner}}",
+							"type": "text"
+						},
+						{
+							"key": "task_id",
+							"value": "{{task_id}}",
+							"type": "text"
+						},
+						{
+							"key": "hours",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "minutes",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "days",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "day_weeks",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/addtaskincron",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"addtaskincron"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
