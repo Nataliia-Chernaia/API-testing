@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "delete user",
+			"name": "DeleteUser",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -37,12 +37,9 @@
 					"raw": "{\r\n        \"name\":\"{{name_user}}\",\r\n        \"email\":\"{{email_user}}\",\r\n        \"password\":222\r\n}"
 				},
 				"url": {
-					"raw": "http://users.bugred.ru/tasks/rest/deleteuser",
-					"protocol": "http",
+					"raw": "{{URL_task_19}}/tasks/rest/deleteuser",
 					"host": [
-						"users",
-						"bugred",
-						"ru"
+						"{{URL_task_19}}"
 					],
 					"path": [
 						"tasks",
@@ -54,7 +51,7 @@
 			"response": []
 		},
 		{
-			"name": "создание пользователя",
+			"name": "UserRegistration",
 			"event": [
 				{
 					"listen": "test",
@@ -95,12 +92,9 @@
 					"raw": "{\r\n    \"email\": \"{{email_user}}\",\r\n    \"name\": \"{{name_user}}\",\r\n    \"password\": \"222\"\r\n}"
 				},
 				"url": {
-					"raw": "http://users.bugred.ru/tasks/rest/doregister",
-					"protocol": "http",
+					"raw": "{{URL_task_19}}/tasks/rest/doregister",
 					"host": [
-						"users",
-						"bugred",
-						"ru"
+						"{{URL_task_19}}"
 					],
 					"path": [
 						"tasks",
@@ -112,7 +106,7 @@
 			"response": []
 		},
 		{
-			"name": "проверка пользователя",
+			"name": "UserVerification",
 			"event": [
 				{
 					"listen": "test",
@@ -172,12 +166,9 @@
 					"raw": "{\r\n    \"email\": \"{{email_user}}\",\r\n    \"name\": \"{{name_user}}\",\r\n    \"password\": \"222\"\r\n}"
 				},
 				"url": {
-					"raw": "http://users.bugred.ru/tasks/rest/getuser",
-					"protocol": "http",
+					"raw": "{{URL_task_19}}/tasks/rest/getuser",
 					"host": [
-						"users",
-						"bugred",
-						"ru"
+						"{{URL_task_19}}"
 					],
 					"path": [
 						"tasks",
