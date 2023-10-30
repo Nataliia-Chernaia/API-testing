@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "09767aba-ff17-4a07-b524-7ff263d608a1",
+		"name": "Task_21",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25562220"
+	},
+	"item": [
+		{
+			"name": "CreateTask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "task_title",
+							"value": "121",
+							"type": "text"
+						},
+						{
+							"key": "task_description",
+							"value": "Task_121",
+							"type": "text"
+						},
+						{
+							"key": "email_owner",
+							"value": "manager@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "email_assign",
+							"value": "manager@mail.ru",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createtask",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createtask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTaskResponse (positive)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email_owner",
+							"value": "manager@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "task_id",
+							"value": "50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/deletetask",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"deletetask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTaskResponse (negative)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email_owner",
+							"value": "manager@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "task_id",
+							"value": "233",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/deletetask",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"deletetask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCompany (positive)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"company_name\": \"Pavlik's donats\",\r\n  \"company_type\": \"ООО\",\r\n  \"company_users\": [\"2969@gmail.com\"],\r\n  \"email_owner\": \"2969@gmail.com\"\r\n}"
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createcompany",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createcompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCompany (negative)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"company_name\": \"Pavlik's donats\",\r\n  \"company_type\": \"ООО\",\r\n  \"company_users\": [\"2976@gmail.com\"],\r\n  \"email_owner\": \"2969@gmail.com\"\r\n}"
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createcompany",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createcompany"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

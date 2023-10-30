@@ -1,0 +1,98 @@
+{
+	"id": "531eba87-f1b2-48be-870f-ccc3c7b457f8",
+	"name": "Task_20",
+	"timestamp": "2023-10-29T13:47:29.816Z",
+	"collection_id": "25562220-8a6de6c5-a5c2-4794-ad01-f73b7fee0657",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-10-29T13:47:24.675Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "1ab6d94e-3805-499f-a01d-3401ebae7720",
+			"name": "CreateUserWithTasks Copy",
+			"url": "http://users.bugred.ru/tasks/rest/createuserwithtasks",
+			"time": 157,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				207,
+				165,
+				167,
+				272,
+				479,
+				146,
+				164,
+				141,
+				157
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "e30b9870-dc70-41bc-85cc-82a5dbac0aa2",
+			"name": "создание компании Copy",
+			"url": "http://users.bugred.ru/tasks/rest/createcompany",
+			"time": 194,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				213,
+				246,
+				128,
+				151,
+				107,
+				101,
+				128,
+				105,
+				194
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		}
+	],
+	"count": 9,
+	"totalTime": 3271,
+	"collection": {
+		"requests": [
+			{
+				"id": "1ab6d94e-3805-499f-a01d-3401ebae7720",
+				"method": "POST"
+			},
+			{
+				"id": "e30b9870-dc70-41bc-85cc-82a5dbac0aa2",
+				"method": "POST"
+			}
+		]
+	}
+}
